@@ -84,10 +84,22 @@ a:active{
   text-align: center;
 }
 
+li{
+  list-style:square;
+  line-height: normal;
+  
+}
+ol li{
+  line-height: normal;
+  list-style: upper-roman;
+}
+
 body p a{
   color: #a66;
   
 }
+
+
 section p a::after{
   content: url(external-link-52.png);
 }
