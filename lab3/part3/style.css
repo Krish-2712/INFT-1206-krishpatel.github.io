@@ -47,11 +47,50 @@ header, footer {
   border-top: 5px solid #a66;
   border-bottom: 5px solid #a66;
 }
-
-h2{
+h1 , h2 {
+  font-family: sans-serif;
+  font-size: large;
   letter-spacing: normal;
 }
 
+h1{
+  font-size: 23px;
+  text-align: center;
+}
+
+@font-face{
+  font-family: serif;
+  src:url("PT_Serif/PTSerif-Regular.ttf")
+
+}
+
+@font-face{
+  font-family: sans-serif;
+  src:url("PT_Serif/PTSerif-Bold.ttf")
+}
+
+a:visited{
+  color: #a66;
+
+}
+a:hover{
+  text-decoration: none;
+}
+
+a:focus{
+  outline: none;
+}
+a:active{
+  text-align: center;
+}
+
+body p a{
+  color: #a66;
+  
+}
+section p a::after{
+  content: url(external-link-52.png);
+}
 
 
 /* WRITE YOUR CODE BELOW HERE */
