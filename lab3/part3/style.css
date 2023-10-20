@@ -99,7 +99,13 @@ body p a{
   
 }
 
-
+nav ul li  {
+  border: #a66 1px solid;
+  text-align: center;
+  padding: 12px;
+  margin: 7px;
+  list-style: none;
+}
 section p a::after{
   content: url(external-link-52.png);
 }
