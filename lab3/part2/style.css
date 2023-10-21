@@ -8,5 +8,10 @@ html {
   justify-content: center;
   align-items: center;
   font-size: 17px;
+  background-color: red;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid rebeccapurple;
+
   
 }
