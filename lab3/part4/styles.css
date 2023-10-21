@@ -71,7 +71,7 @@ body {
     
 }
 article{
-  width: 750px;
+  width: 800px;
   height: 650px;
 }
 
@@ -81,10 +81,10 @@ article{
 
 aside{
   position:absolute;
-  width: 270px;
-  height: 300px;
+  width: 300px;
+  height: 550px;
   top: 190px;
-  right: 170px;
+  right: 150px;
 
 }
 
