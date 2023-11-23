@@ -62,4 +62,36 @@ class Ball {
     this.x += this.velX;
     this.y += this.velY;
   }
+
+  // collision detect with the
+
+  collisionDetect(){
+    for (const ball of balls){
+      if(this !== ball){
+        const dx  = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx*dx + dy*dy)
+
+        if(distance < this.size + ball.size){
+          ball.color = randomRGB();
+        }
+      }
+    }
+  }
+}
+
+// created an array for the balls and give the constructor values as needed in the range
+const balls = [];
+
+while(balls.length < 25){
+  const size = random(10,20);
+  const ball = new Ball(
+    random(0 + size,width - size),
+    random(0 + size,height - size),
+    random(-7,7),
+    random(-7,7),
+    randomRGB(),
+    size
+
+  );
 }
