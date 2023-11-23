@@ -27,8 +27,19 @@ newImage.addEventListener("click", event =>{
     displayedImage.alt = event.target.alt;
 });
 
-
-
 }
 
 /* Wiring up the Darken/Lighten button */
+
+btn.addEventListener("click",()=>{
+    const newButton = btn.getAttribute("class");
+    if (newButton == "dark"){
+        btn.setAttribute("class","light");
+        btn.textContent = "lighten";
+        overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
+    } else{
+        btn.setAttribute("class","dark");
+        btn.textContent = "Darken";
+        overlay.style.backgroundColor = "rgba(0,0,0,0)";
+    }
+});
