@@ -28,8 +28,15 @@ function result() {
 
     newStory = newStory
 
+    const xItem = randomValueFromArray(array)
+    const yItem = randomValueFromArray(array)
+    const zItem = randomValueFromArray(array)
+
+
+    
+
     if(customName.value !== '') {
-    const name = customName.value;
+        const name = customName.value;
 
 }
 
