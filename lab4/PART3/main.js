@@ -9,8 +9,7 @@ const height = (canvas.height = window.innerHeight);
 // function to generate random number
 
 function random(min, max) {
-  const num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // function to generate random color
@@ -25,7 +24,7 @@ class Ball {
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
     this.y = y;
-    this.velX = velx;
+    this.velX = velX;
     this.velY = velY;
     this.color = color;
     this.size = size;
@@ -43,7 +42,7 @@ class Ball {
   // update class for updating the co ordinates of the ball
 
   update(){
-    if ((this.x + this.y)>= width){
+    if ((this.x + this.size)>= width){
       this.velX = -(this.velX);
     }
 
@@ -67,7 +66,7 @@ class Ball {
 
   collisionDetect(){
     for (const ball of balls){
-      if(this !== ball){
+      if((this !== ball)){
         const dx  = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx*dx + dy*dy)
@@ -82,9 +81,10 @@ class Ball {
 
 // created an array for the balls and give the constructor values as needed in the range
 const balls = [];
-
-while(balls.length < 25){
-  const size = random(10,20);
+// amount of balls you want in the animation
+while(balls.length < 30){
+  // create the random size for the balls as the range from 15 to 30
+  const size = random(15,30);
   const ball = new Ball(
     random(0 + size,width - size),
     random(0 + size,height - size),
@@ -98,9 +98,9 @@ while(balls.length < 25){
   balls.push(ball);
 }
 
-
+// creating a main loop and passing the values and calling the craeted mehods to see the output
 function loop(){
-  ctx.fillStyle = rgba(0,0,0,0.25);
+  ctx.fillStyle = 'rgba(0,0,0,0.25)';
   ctx.fillRect(0,0,width,height);
 
   for (const ball of balls){
